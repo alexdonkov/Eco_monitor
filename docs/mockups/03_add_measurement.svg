@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 760" font-family="Arial, sans-serif">
+  <!-- mobile view -->
+  <rect width="420" height="760" rx="28" fill="#222"/>
+  <rect x="12" y="12" width="396" height="736" rx="20" fill="#f6f8f7"/>
+  <rect x="12" y="12" width="396" height="60" rx="20" fill="#1f6f4a"/><rect x="12" y="50" width="396" height="22" fill="#1f6f4a"/>
+  <text x="32" y="50" fill="#fff" font-size="20" font-weight="bold">☰  EcoMonitor</text>
+  <text x="340" y="50" fill="#fff" font-size="14">BG|EN</text>
+  <text x="32" y="112" font-size="22" font-weight="bold">Добави измерване</text>
+  <g font-size="14">
+    <text x="32" y="150">Място *</text>
+    <rect x="32" y="158" width="356" height="40" rx="6" fill="#fff" stroke="#ccc"/><text x="44" y="183">Училищен двор ▾</text>
+    <text x="32" y="226">Показател *</text>
+    <rect x="32" y="234" width="356" height="40" rx="6" fill="#fff" stroke="#ccc"/><text x="44" y="259">PM2.5 (µg/m³) ▾</text>
+    <text x="32" y="302">Стойност *</text>
+    <rect x="32" y="310" width="356" height="40" rx="6" fill="#fff" stroke="#d9483b" stroke-width="2"/><text x="44" y="335">5000</text>
+    <text x="32" y="368" font-size="12" fill="#b3261e">⚠ Стойността трябва да е между 0 и 1000 µg/m³</text>
+    <text x="32" y="400">Дата и час *</text>
+    <rect x="32" y="408" width="356" height="40" rx="6" fill="#fff" stroke="#ccc"/><text x="44" y="433">09.11.2026  11:30</text>
+    <text x="32" y="476">Уред / бележка</text>
+    <rect x="32" y="484" width="356" height="70" rx="6" fill="#fff" stroke="#ccc"/><text x="44" y="508" fill="#999">напр. „Ръчен сензор PMS5003“</text>
+  </g>
+  <rect x="32" y="580" width="356" height="48" rx="8" fill="#1f6f4a"/>
+  <text x="168" y="610" fill="#fff" font-size="16" font-weight="bold">Запази</text>
+  <rect x="32" y="644" width="356" height="70" rx="8" fill="#eaf5ee"/>
+  <text x="44" y="670" font-size="13" fill="#1f6f4a">ℹ Ръчните измервания са „непотвърдени“,</text>
+  <text x="44" y="690" font-size="13" fill="#1f6f4a">докато ръководителят не ги провери.</text>
+</svg>

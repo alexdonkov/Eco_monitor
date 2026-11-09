@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Arial, sans-serif">
+  <rect width="1000" height="640" fill="#f6f8f7"/>
+  <rect width="1000" height="56" fill="#1f6f4a"/>
+  <text x="24" y="36" fill="#fff" font-size="22" font-weight="bold">🌿 EcoMonitor</text>
+  <text x="300" y="35" fill="#e6f2ec" font-size="15">← Обратно към картата</text>
+  <rect x="800" y="14" width="74" height="28" rx="14" fill="#fff"/>
+  <text x="813" y="33" font-size="14" fill="#1f6f4a" font-weight="bold">BG</text><text x="838" y="33" font-size="14" fill="#999">| EN</text>
+  <text x="24" y="96" font-size="24" font-weight="bold">Училищен двор</text>
+  <text x="24" y="120" font-size="13" fill="#666">42.69°N, 23.32°E · навън · 124 измервания</text>
+  <!-- controls -->
+  <rect x="24" y="138" width="140" height="32" rx="6" fill="#fff" stroke="#ccc"/><text x="36" y="159" font-size="14">PM2.5 ▾</text>
+  <g font-size="14">
+    <rect x="190" y="138" width="64" height="32" rx="6" fill="#fff" stroke="#ccc"/><text x="204" y="159">24 ч</text>
+    <rect x="260" y="138" width="64" height="32" rx="6" fill="#1f6f4a"/><text x="270" y="159" fill="#fff">7 дни</text>
+    <rect x="330" y="138" width="70" height="32" rx="6" fill="#fff" stroke="#ccc"/><text x="340" y="159">30 дни</text>
+    <rect x="406" y="138" width="150" height="32" rx="6" fill="#fff" stroke="#ccc"/><text x="418" y="159">📅 Собствен период</text>
+  </g>
+  <!-- chart -->
+  <rect x="24" y="186" width="640" height="420" rx="8" fill="#fff" stroke="#d5ddd8"/>
+  <line x1="70" y1="560" x2="640" y2="560" stroke="#999"/><line x1="70" y1="210" x2="70" y2="560" stroke="#999"/>
+  <line x1="70" y1="420" x2="640" y2="420" stroke="#f2b632" stroke-dasharray="6 4"/><text x="80" y="414" font-size="11" fill="#8a5a00">праг 15</text>
+  <line x1="70" y1="350" x2="640" y2="350" stroke="#d9483b" stroke-dasharray="6 4"/><text x="560" y="344" font-size="11" fill="#b3261e">праг 25</text>
+  <polyline fill="none" stroke="#1f6f4a" stroke-width="2.5" points="80,470 130,460 180,480 230,450 280,455 330,440 380,250 430,445 480,430 530,420 580,410 630,400"/>
+  <line x1="80" y1="478" x2="630" y2="408" stroke="#5b7bd5" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="380" cy="250" r="8" fill="#d9483b"/><text x="392" y="246" font-size="12" fill="#b3261e">аномалия (z = 6,2)</text>
+  <g font-size="11" fill="#666"><text x="76" y="578">пн</text><text x="170" y="578">вт</text><text x="264" y="578">ср</text><text x="358" y="578">чт</text><text x="452" y="578">пт</text><text x="546" y="578">сб</text><text x="620" y="578">нд</text>
+  <text x="34" y="565">0</text><text x="30" y="425">15</text><text x="30" y="355">25</text></g>
+  <!-- stats -->
+  <rect x="684" y="186" width="296" height="200" rx="8" fill="#fff" stroke="#d5ddd8"/>
+  <text x="704" y="216" font-size="17" font-weight="bold">Статистика</text>
+  <g font-size="14"><text x="704" y="246">Минимум</text><text x="900" y="246">6,1</text>
+  <text x="704" y="272">Максимум</text><text x="900" y="272">38,4</text>
+  <text x="704" y="298">Средно</text><text x="900" y="298">14,2</text>
+  <text x="704" y="324">Медиана</text><text x="900" y="324">12,8</text>
+  <text x="704" y="350">Аномалии</text><text x="900" y="350" fill="#b3261e">1</text></g>
+  <rect x="684" y="400" width="296" height="120" rx="8" fill="#fdecea"/>
+  <text x="704" y="430" font-size="17" font-weight="bold">Тенденция: ↑ влошава се</text>
+  <text x="704" y="456" font-size="13">+0,9 µg/m³ на ден (R² = 0,62)</text>
+  <text x="704" y="478" font-size="13" fill="#555">Стойностите растат през седмицата —</text>
+  <text x="704" y="496" font-size="13" fill="#555">вероятно заради отоплението.</text>
+  <text x="684" y="550" font-size="12" fill="#666">Източници: ръчни измервания (потвърдени)</text>
+  <text x="684" y="568" font-size="12" fill="#666">+ Open-Meteo (моделна оценка)</text>
+</svg>

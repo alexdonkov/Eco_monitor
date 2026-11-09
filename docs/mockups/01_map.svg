@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Arial, sans-serif">
+  <rect width="1000" height="640" fill="#f6f8f7"/>
+  <!-- header -->
+  <rect width="1000" height="56" fill="#1f6f4a"/>
+  <text x="24" y="36" fill="#fff" font-size="22" font-weight="bold">🌿 EcoMonitor</text>
+  <g fill="#e6f2ec" font-size="15">
+    <text x="300" y="35" font-weight="bold" text-decoration="underline">Карта</text>
+    <text x="370" y="35">Сравнение</text>
+    <text x="470" y="35">Сигнали</text>
+    <text x="555" y="35">+ Добави измерване</text>
+  </g>
+  <rect x="800" y="14" width="74" height="28" rx="14" fill="#fff"/>
+  <text x="813" y="33" font-size="14" fill="#1f6f4a" font-weight="bold">BG</text><text x="838" y="33" font-size="14" fill="#999">| EN</text>
+  <text x="890" y="35" fill="#fff" font-size="15">Вход</text>
+  <!-- map -->
+  <rect x="20" y="76" width="640" height="544" rx="8" fill="#dfe9e3" stroke="#b9c9bf"/>
+  <path d="M40 300 Q200 220 330 320 T640 280" stroke="#a9c4d6" stroke-width="14" fill="none"/>
+  <path d="M120 90 L180 600 M60 450 L650 470 M400 80 L360 610" stroke="#fff" stroke-width="6"/>
+  <g font-size="12">
+    <circle cx="250" cy="200" r="14" fill="#3aa35b"/><text x="270" y="205">Парк — PM2.5: 8</text>
+    <circle cx="420" cy="330" r="14" fill="#f2b632"/><text x="440" y="335">Училищен двор — 21</text>
+    <circle cx="540" cy="460" r="14" fill="#d9483b"/><text x="420" y="500">Булевард — 48 ⚠</text>
+    <rect x="300" y="390" width="24" height="24" rx="4" fill="#5b7bd5"/><text x="300" y="430">Клас 10Б (CO₂)</text>
+  </g>
+  <rect x="36" y="560" width="250" height="44" rx="6" fill="#fff" stroke="#ccc"/>
+  <g font-size="11"><circle cx="52" cy="582" r="6" fill="#3aa35b"/><text x="62" y="586">Добро</text>
+  <circle cx="112" cy="582" r="6" fill="#f2b632"/><text x="122" y="586">Умерено</text>
+  <circle cx="182" cy="582" r="6" fill="#d9483b"/><text x="192" y="586">Лошо</text></g>
+  <rect x="520" y="90" width="124" height="30" rx="6" fill="#fff" stroke="#ccc"/>
+  <text x="532" y="110" font-size="13">PM2.5 ▾</text>
+  <!-- side panel -->
+  <rect x="680" y="76" width="300" height="544" rx="8" fill="#fff" stroke="#d5ddd8"/>
+  <text x="700" y="108" font-size="17" font-weight="bold">Последни сигнали</text>
+  <g font-size="13">
+    <rect x="696" y="124" width="268" height="72" rx="6" fill="#fdecea"/>
+    <text x="708" y="146" font-weight="bold" fill="#b3261e">🔴 Опасно — Булевард</text>
+    <text x="708" y="166">PM2.5 = 48 µg/m³ (праг 25)</text>
+    <text x="708" y="184" fill="#666">преди 20 мин</text>
+    <rect x="696" y="206" width="268" height="72" rx="6" fill="#fff6e0"/>
+    <text x="708" y="228" font-weight="bold" fill="#8a5a00">🟠 Аномалия — Клас 10Б</text>
+    <text x="708" y="248">CO₂ = 1850 ppm (обичайно ~900)</text>
+    <text x="708" y="266" fill="#666">преди 1 ч</text>
+  </g>
+  <text x="700" y="320" font-size="17" font-weight="bold">Тенденция (7 дни)</text>
+  <g font-size="13"><text x="700" y="346">PM2.5 средно</text><text x="880" y="346" fill="#b3261e">↑ +18%</text>
+  <text x="700" y="370">Температура</text><text x="880" y="370" fill="#666">→ стабилна</text></g>
+  <rect x="700" y="560" width="260" height="40" rx="6" fill="#1f6f4a"/>
+  <text x="762" y="586" fill="#fff" font-size="15">+ Добави измерване</text>
+</svg>
