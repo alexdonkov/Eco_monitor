@@ -1,0 +1,49 @@
+/* ===== EcoMonitor — основни стилове (mobile-first) ===== */
+:root {
+  --brand: #17694a;
+  --brand-dark: #0f4f37;
+  --bg: #f3f6f4;
+  --card: #ffffff;
+  --ink: #15231c;
+  --muted: #5d6f66;
+  --line: #dde6e1;
+  /* цветове на качеството на въздуха */
+  --very-good: #2f9e5b;
+  --good: #9cc33b;
+  --moderate: #f0b429;
+  --bad: #e2602f;
+  --very-bad: #b8323f;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+
+.topbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  padding: 10px 16px; background: var(--brand-dark); color: #fff;
+}
+.topbar a { color: #e6f2ec; text-decoration: none; }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 12px; }
+.topbar nav a.active { color: #fff; font-weight: 700; }
+.logo { font-weight: 800; font-size: 1.2rem; }
+.lang button { border: 0; background: transparent; color: #cfe6da; cursor: pointer; font-weight: 600; }
+.lang button.active { color: #fff; text-decoration: underline; }
+
+main { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.page { display: none; }
+.page.active { display: block; }
+
+#mapContainer { height: 60vh; border-radius: var(--radius); }
+
+.toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 8px;
+  opacity: 0; transition: opacity .3s; pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+@media (min-width: 800px) {
+  .topbar { flex-wrap: nowrap; }
+  .topbar nav { flex: 1; }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoMonitor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Библиотеки от CDN — без инсталация -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#map">🌿 EcoMonitor</a>
+    <nav>
+      <a href="#map" data-i18n="nav.map"></a>
+      <a href="#compare" data-i18n="nav.compare"></a>
+      <a href="#ventilation" data-i18n="nav.ventilation"></a>
+      <a href="#alerts" data-i18n="nav.alerts"></a>
+      <a href="#add" data-i18n="nav.add"></a>
+    </nav>
+    <div class="lang">
+      <button data-lang="bg">BG</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="#login" class="login" data-i18n="nav.login"></a>
+  </header>
+
+  <main>
+    <!-- Всяка страница е <section>; main.js показва само активната -->
+    <section id="map" class="page">
+      <h1 data-i18n="map.title"></h1>
+      <div id="mapContainer"></div>          <!-- TODO (Миро): карта с Leaflet -->
+    </section>
+
+    <section id="location" class="page">
+      <h1 id="locationName"></h1>
+      <canvas id="locationChart"></canvas>   <!-- TODO (Миро): графика с Chart.js -->
+      <div id="locationStats"></div>         <!-- TODO (Алекс): статистика + тенденция -->
+    </section>
+
+    <section id="compare" class="page">
+      <h1 data-i18n="compare.title"></h1>
+      <canvas id="compareChart"></canvas>
+    </section>
+
+    <section id="ventilation" class="page">
+      <h1 data-i18n="ventilation.title"></h1>
+      <!-- TODO (Алекс): треньор за проветряване -->
+    </section>
+
+    <section id="alerts" class="page">
+      <h1 data-i18n="alerts.title"></h1>
+      <div id="alertsList"></div>
+    </section>
+
+    <section id="add" class="page">
+      <h1 data-i18n="add.title"></h1>
+      <form id="measurementForm" novalidate>
+        <!-- TODO (Миро): полета място, показател, стойност, дата, бележка -->
+      </form>
+    </section>
+
+    <section id="login" class="page">
+      <h1 data-i18n="login.title"></h1>
+      <form id="loginForm" novalidate>
+        <!-- TODO (Алекс): имейл, парола, вход/регистрация -->
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
