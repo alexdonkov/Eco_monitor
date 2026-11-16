@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoMonitor</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Библиотеки от CDN — без инсталация -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#map">🌿 EcoMonitor</a>
+    <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+    <nav id="mainNav">
+      <a href="#map" data-i18n="nav.map"></a>
+      <a href="#compare" data-i18n="nav.compare"></a>
+      <a href="#ventilation" data-i18n="nav.ventilation"></a>
+      <a href="#alerts" data-i18n="nav.alerts"></a>
+      <a href="#add" data-i18n="nav.add"></a>
+    </nav>
+    <div class="lang">
+      <button data-lang="bg">BG</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <div id="authArea" class="auth-area"></div>
+  </header>
+
+  <div id="configBanner" class="banner" hidden data-i18n="errors.noConfig"></div>
+
+  <main>
+    <!-- ============ Карта ============ -->
+    <section id="map" class="page">
+      <div class="page-head">
+        <div>
+          <h1 data-i18n="map.title"></h1>
+          <p class="muted" data-i18n="map.subtitle"></p>
+        </div>
+        <label class="inline">
+          <span data-i18n="map.indicator"></span>
+          <select id="mapIndicator"></select>
+        </label>
+      </div>
+      <div class="card">
+        <div id="mapContainer"></div>
+        <div id="mapLegend" class="legend"></div>
+      </div>
+    </section>
+
+    <!-- ============ Място ============ -->
+    <section id="location" class="page">
+      <a href="#map" class="back" data-i18n="location.back"></a>
+      <h1 id="locationName"></h1>
+      <p class="muted" id="locationMeta"></p>
+      <div class="card">
+        <h2 data-i18n="location.latest"></h2>
+        <div id="locationTable"></div>
+      </div>
+      <div class="card placeholder">
+        <h2 data-i18n="location.chartTitle"></h2>
+        <p class="muted" data-i18n="soon.week3"></p>
+      </div>
+    </section>
+
+    <!-- ============ Сравнение ============ -->
+    <section id="compare" class="page">
+      <h1 data-i18n="compare.title"></h1>
+      <p class="muted" data-i18n="compare.subtitle"></p>
+      <div class="card placeholder"><p data-i18n="soon.week4"></p></div>
+    </section>
+
+    <!-- ============ Проветряване ============ -->
+    <section id="ventilation" class="page">
+      <h1 data-i18n="ventilation.title"></h1>
+      <p class="muted" data-i18n="ventilation.subtitle"></p>
+      <div class="card placeholder"><p data-i18n="soon.week4"></p></div>
+    </section>
+
+    <!-- ============ Сигнали ============ -->
+    <section id="alerts" class="page">
+      <h1 data-i18n="alerts.title"></h1>
+      <p class="muted" data-i18n="alerts.subtitle"></p>
+      <div class="card placeholder"><p data-i18n="soon.week3"></p></div>
+    </section>
+
+    <!-- ============ Добави измерване ============ -->
+    <section id="add" class="page">
+      <h1 data-i18n="add.title"></h1>
+      <div class="card narrow" id="addNeedLogin" hidden>
+        <p data-i18n="add.needLogin"></p>
+        <a class="btn primary" href="#login" data-i18n="nav.login"></a>
+      </div>
+      <form class="card narrow" id="measurementForm" novalidate hidden>
+        <label><span data-i18n="add.location"></span><select name="location" id="addLocation"></select></label>
+        <label><span data-i18n="add.indicator"></span><select name="indicator" id="addIndicator"></select></label>
+        <label><span data-i18n="add.value"></span><input name="value" type="number" step="0.1" inputmode="decimal"></label>
+        <label><span data-i18n="add.time"></span><input name="measuredAt" type="datetime-local"></label>
+        <label><span data-i18n="add.note"></span><textarea name="note" rows="2" maxlength="300" data-i18n-placeholder="add.notePlaceholder"></textarea></label>
+        <button type="submit" class="btn primary" disabled data-i18n="add.save"></button>
+        <p class="muted small" data-i18n="soon.week3save"></p>
+      </form>
+    </section>
+
+    <!-- ============ Вход / регистрация ============ -->
+    <section id="login" class="page">
+      <form class="card narrow" id="authForm" novalidate>
+        <div class="tabs">
+          <button type="button" data-auth-tab="login" data-i18n="auth.loginTab"></button>
+          <button type="button" data-auth-tab="register" data-i18n="auth.registerTab"></button>
+        </div>
+        <label class="only-register"><span data-i18n="auth.name"></span>
+          <input name="name" autocomplete="nickname" maxlength="50">
+          <small class="field-error" data-error-for="name"></small></label>
+        <label><span data-i18n="auth.email"></span>
+          <input name="email" type="email" autocomplete="email">
+          <small class="field-error" data-error-for="email"></small></label>
+        <label><span data-i18n="auth.password"></span>
+          <input name="password" type="password" autocomplete="current-password">
+          <small class="field-error" data-error-for="password"></small></label>
+        <p class="field-error" data-error-for="form"></p>
+        <button type="submit" class="btn primary"></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-i18n="footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
