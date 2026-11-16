@@ -25,8 +25,9 @@ HTML5 · CSS3 · JavaScript (ES6+) · Supabase (PostgreSQL, Auth, RLS) · Leafle
 ```
 
 ## Стартиране
-1. Създайте проект в [Supabase](https://supabase.com) и изпълнете `database/schema.sql` в SQL Editor.
-2. Копирайте `.env.example` като `src/js/config.js` и попълнете URL и `anon` ключа.
+Подробно: [docs/SUPABASE_SETUP.md](docs/SUPABASE_SETUP.md)
+1. Създайте проект в [Supabase](https://supabase.com) и изпълнете `database/schema.sql`, после `database/seed.sql` в SQL Editor.
+2. Копирайте `src/js/config.example.js` като `src/js/config.js` и попълнете URL и `anon` ключа.
 3. Отворете `src/index.html` с локален сървър (напр. разширението Live Server във VS Code).
 
 ## Екип
